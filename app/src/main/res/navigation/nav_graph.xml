@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/businessFragment">
+
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="com.example.android.news.presentation.sports.SportsFragment"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" />
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="com.example.android.news.presentation.business.BusinessFragment"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" />
+    <fragment
+        android:id="@+id/scienceFragment"
+        android:name="com.example.android.news.presentation.science.ScienceFragment"
+        android:label="fragment_science"
+        tools:layout="@layout/fragment_science" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.android.news.presentation.technology.TechnologyFragment"
+        android:label="fragment_technology"
+        tools:layout="@layout/fragment_technology" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.android.news.presentation.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
