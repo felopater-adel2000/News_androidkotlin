@@ -2,6 +2,7 @@ package com.example.android.news.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.view.get
@@ -10,14 +11,23 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.android.news.R
+import com.example.android.news.data.repo.RepositoryImp
 import com.example.android.news.databinding.ActivityMainBinding
+import com.example.android.news.domain.usrcase.NewsUseCase
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity()
 {
     private lateinit var binding: ActivityMainBinding
     lateinit var bottomNavigationView: BottomNavigationView
     lateinit var menuActivity: Menu
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -28,8 +38,6 @@ class MainActivity : AppCompatActivity()
         val navController = findNavController(R.id.fgm_navHost)
         NavigationUI.setupActionBarWithNavController(this, navController)
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean
