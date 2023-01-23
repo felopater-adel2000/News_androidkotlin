@@ -8,26 +8,26 @@
     <fragment
         android:id="@+id/sportsFragment"
         android:name="com.example.android.news.presentation.sports.SportsFragment"
-        android:label="fragment_sports"
+        android:label="Sports"
         tools:layout="@layout/fragment_sports" />
     <fragment
         android:id="@+id/businessFragment"
         android:name="com.example.android.news.presentation.business.BusinessFragment"
-        android:label="fragment_business"
+        android:label="Business"
         tools:layout="@layout/fragment_business" />
     <fragment
         android:id="@+id/scienceFragment"
         android:name="com.example.android.news.presentation.science.ScienceFragment"
-        android:label="fragment_science"
+        android:label="Science"
         tools:layout="@layout/fragment_science" />
     <fragment
         android:id="@+id/technologyFragment"
         android:name="com.example.android.news.presentation.technology.TechnologyFragment"
-        android:label="fragment_technology"
+        android:label="Technology"
         tools:layout="@layout/fragment_technology" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.android.news.presentation.search.SearchFragment"
-        android:label="fragment_search"
+        android:label="Search"
         tools:layout="@layout/fragment_search" />
 </navigation>

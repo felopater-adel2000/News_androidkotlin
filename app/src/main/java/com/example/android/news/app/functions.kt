@@ -1,6 +1,9 @@
 package com.example.android.news.app
 
+import android.content.Intent
 import android.util.Log
+import androidx.core.net.toUri
+import androidx.fragment.app.Fragment
 import com.example.android.news.domain.Article
 import com.example.android.news.domain.Source
 import org.json.JSONObject
@@ -35,4 +38,15 @@ fun castJsonToArticles(json: JSONObject): List<Article>
     {
         return emptyList()
     }
+}
+
+fun Fragment.sendUrlIntent(url: String)
+{
+    val intent = Intent(Intent.ACTION_VIEW).setData(url.toUri().buildUpon().scheme("https").build())
+    this.startActivity(intent)
+}
+
+fun printMessage(msg: String)
+{
+    Log.i("Felo", msg)
 }
